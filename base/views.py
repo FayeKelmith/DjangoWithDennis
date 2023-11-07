@@ -9,11 +9,13 @@ rooms = [
     {"id":2, "name": "Django is kinda dope"},
     {"id":3, "name": "Except templates"},
          ]
-
+ 
 def home(request):
-    return render(request, 'home.html',{'rooms':rooms})
+    context =  {'rooms':rooms}
+    return render(request, 'base/home.html',context)
 
 
-def room(request):
-    return render(request, 'room.html')
+def room(request,pk):
+    context = {'id':[{"id":pk}]}
+    return render(request, 'base/room.html',context)
     
