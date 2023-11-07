@@ -3,7 +3,9 @@
 <h1>Home</h1>
 <div>
   {% for room in rooms %}
-  <h5>{{room.id}} -- {{room.name}}</h5>
+  <p>{{room.id}}</p>
+  <h5>{{room.name}}</h5>
+  <h5>{{room.description}}</h5>
   {%endfor%}
 </div>
 
