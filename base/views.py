@@ -15,6 +15,9 @@ def home(request):
     context = {'rooms':rooms}
     return render(request, 'base/home.html',context)
 
+def empty(request):
+    context = {"Information": "You gotta pick a band"}
+    return render(request, 'base/room.html')
 
 def room(request,pk):
     context = {'id':[{"id":pk}]}
